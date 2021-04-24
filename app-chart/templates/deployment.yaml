@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vcita-deployment
+  # namespace: {{ .Values.namespace }}
+  labels:
+    app: vcita-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vcita-app
+  template:
+    metadata:
+      labels:
+        app: vcita-app
+    spec:
+      containers:
+      - name: vcita-app
+        image: {{ .Values.image }}
+        ports:
+        - containerPort: 5000
