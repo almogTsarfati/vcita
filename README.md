@@ -22,4 +22,4 @@ Run this command to get the exposed port:
 kubectl describe svc vcita-service | grep NodePort
 
 Finaly, Run:
-curl -X POST --data "Hi!" <node-public-ip>:<port>
+curl -X POST --data "Hi!" (node-public-ip):(port)
