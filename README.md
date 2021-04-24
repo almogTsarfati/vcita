@@ -9,6 +9,7 @@ wget (required for the eks module)
 helm
 
 git clone https://github.com/almogTsarfati/vcita.git
+cd vcita
 terraform init
 terraform apply
 aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
