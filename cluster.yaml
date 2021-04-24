@@ -8,7 +8,7 @@ metadata:
 nodeGroups:
   - name: ng-1
     instanceType: t2.medium
-    desiredCapacity: 2
+    desiredCapacity: 1
     iam:
       withAddonPolicies:
         autoScaler: true
